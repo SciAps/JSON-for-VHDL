@@ -65,8 +65,8 @@ package JSON is
 	type T_JSON_INDEX is array(NATURAL range <>) of T_JSON_INDEX_ELEMENT;
 
 	constant C_JSON_ERROR_MESSAGE_LENGTH	: NATURAL		:= 64;
-	constant C_JSON_INDEX_MAX     : T_UINT16 := 1023;
-	constant C_JSONFILE_INDEX_MAX : T_UINT16 := 4*C_JSON_INDEX_MAX;
+	constant C_JSON_INDEX_MAX     : T_UINT16 := 2**16-1;--1023;
+	constant C_JSONFILE_INDEX_MAX : T_UINT16 := 2**16-1;--4*C_JSON_INDEX_MAX;
 
 	type T_JSON is record
 		Content				: STRING(1 to T_UINT16'high);
